@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이식아</title>
+    <link href="../../../assets/css/common.css" rel="stylesheet" type="text/css">
+    <link href="../../../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../../../assets/css/admin.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+    <div id="wrap">
+        <div id="header" class="clearfix">
+            <h1 class="header-inner">
+                <a href=""><img src="../../../assets/img/icon/logo.png"></a>
+            </h1>
+
+            <!-- 로그인했을때 -->
+            <c:if test="${sessionScope.authUser != null}">
+                <ul>
+                    <li><span id="welcome">고객 님 안녕하세요^^</span></li>
+                    <li><a href="" class="btn_s"><img src="../../../assets/img/icon/btn_cart.png"></a></li>
+                    <li><a href="" class="btn_s"><img src="../../../assets/img/icon/btn_gnb_customer.png"></a></li>
+                    <li><a href="" class="btn_s"><img src="../../../assets/img/icon/btn_gnb_mypage.png"></a></li>
+                </ul>
+            </c:if>
+
+            <!-- 로그인 안했을때 -->
+            <c:if test="${sessionScope.authUser == null}">
+                <!-- <ul>
+                <li><a href="" class="btn_s"><img src="../../assets/img/icon/btn_cart_c.png"></a></li>
+                <li><a href="" class="btn_s"><img src="../../assets/img/icon/btn_gnb_customer_c.png"></a></li>
+                <li><a href="" class="btn_s"><img src="../../assets/img/icon/btn_gnb_mypage_c.png"></a></li>
+            </ul> -->
+            </c:if>
+        </div>
+
+        <!-- navigation -->
+        <div id="nav">
+            <h1>고객센터</h1>
+            <ul class="clearfix">
+                <li>문의 게시판</li>
+                <li>1:1 문의하기</li>
+            </ul>
+        </div>
+
+        <div id="board">
+            <div id="list">
+                <table class="userMng">
+                    <thead>
+                        <tr>
+                            <th>문의번호</th>
+                            <th>문의상태</th>
+                            <th>문의일</th>
+                            <th>제목</th>
+                            <th>문의종류</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>답변대기중</td>
+                            <td>2024-01-01</td>
+                            <td>이시가 이름이...</td>
+                            <td>상품문의</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>답변됨</td>
+                            <td>2024-01-01</td>
+                            <td>이시가 이름이...</td>
+                            <td>배송문의</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>답변대기중</td>
+                            <td>2024-01-01</td>
+                            <td>이시가 이름이...</td>
+                            <td>일반무의</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div id="paging">
+                    <ul>
+                        <li><a href="">◀</a></li>
+                        <li><a href="">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                        <li class="active"><a href="">5</a></li>
+                        <li><a href="">6</a></li>
+                        <li><a href="">7</a></li>
+                        <li><a href="">8</a></li>
+                        <li><a href="">9</a></li>
+                        <li><a href="">10</a></li>
+                        <li><a href="">▶</a></li>
+                    </ul>
+
+
+                    <div class="clear"></div>
+                </div>
+                    <a id="btn_write" href="">글쓰기</a>
+            </div>
+            <!-- //list -->
+        </div>
+        <!-- //board -->
+        <!-- footer -->
+        <div id="footer">
+            <div id="footer_l">
+                <p>서울시 서초구 강남대로 405 통영빌딩 8층</p>
+                <p>상호명:(주)ElecCigaMarket 대표자 : 황일영</p>
+                <p>사업자 등록번호 : 506 - 79 - 45687</p>
+                <p>Copyright ⓒ 2024 하이미디어 All right reserved</p>
+            </div>
+            <div id="footer_r">
+                <p>주문 취소/교환 불가합니다^^</p>
+                <p>게시판문의(전화상담은 운영하지 않습니다)</p>
+                <p>평일 12:00~16:00</p>
+                <p>1588-7585</p>
+            </div>
+        </div>
+        <!-- //footer -->
+    </div>
+    <!-- //content-head -->
+</body>
+
+</html>

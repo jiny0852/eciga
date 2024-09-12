@@ -1,0 +1,266 @@
+@charset "UTF-8";
+
+/*레이아웃*/
+#wrap {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+#wrap #contents {
+    /*가로 1단 - 메인페이지*/
+    padding: 30px 20px;
+}
+
+#wrap #contents2 {
+    /*가로 2단 모든페이지*/
+    padding: 20px 0;
+}
+
+#wrap #contents2 #aside {
+    float: left;
+    ;
+    width: 180px;
+}
+
+#wrap #contents2 #main {
+    float: left;
+    width: 805px;
+    margin-left: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* 헤더 */
+#header {
+    width: 1200px;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* 헤더 하단에 그림자 추가 */
+}
+
+.contents #aside{
+    width: 400px;
+    float: left;
+}
+
+#header h1 {
+    float: left;
+    font-size: 35px;
+    font-weight: bold;
+    color: #79b30b;
+    margin: 10px 0 0 20px;
+}
+
+#header .header-inner {
+    /* 좌우로 요소를 분리 */
+    align-items: center;
+    /* 세로로 중앙 정렬 */
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#header ul {
+    display: flex;
+    /* 로그인/회원관리 부분도 flex로 정렬 */
+    align-items: center;
+    /* 세로 정렬 */
+    flex-shrink: 0;
+    /* 이 요소도 줄어들지 않도록 설정 */
+    margin: 0;
+    float: right;
+    margin-top: 20px;
+}
+
+#header .header-inner img {
+    padding: 13px 0 0 20px;
+}
+
+#header ul>li {
+    float: left;
+    padding: 3px 5px;
+    margin-left: 10px;
+    background-color: #fff;
+    font-size: 10px;
+    /* border-radius: 3px;
+    border: 1px solid #c0c0c0; */
+}
+
+#header ul img {
+    width: 40px;
+    height: 40px;
+}
+
+#header ul #welcome {
+    float: left;
+    padding-top: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+#nav {
+    margin-top: 85px;;
+    z-index: 980; /* 헤더보다 아래에 표시 */
+    background-color: #fff;
+    padding: 20px 0 10px 0;
+}
+
+#nav h1 {
+    text-align: left;
+    font-size: 30px;
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+
+#nav ul {
+    list-style: none;
+    margin: 0;
+    width: 100%;
+    height: 40px;
+    padding: 15px 0;
+    border-top: 1px solid #c0c0c0;
+}
+
+#nav ul li {
+    float: left;
+    text-align: center;
+    padding-left: 30px;
+    padding-top: 12px;
+    margin-right: 10px;
+}
+
+#nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#nav ul li a:hover {
+    color: #000;
+}
+
+img {
+    opacity: 1;
+    transition: opavity 0.3s;
+}
+
+img:hover {
+    opacity:0.7;
+}
+
+
+/*메인페이지 컨텐츠*/
+#contents #profile {
+    float: left;
+    width: 300px;
+    margin-right: 30px;
+}
+
+#contents #greeting-box {
+    float: left;
+    font-size: 18px;
+}
+
+#contents #greeting-box .greeting {
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+/* 푸터 스타일 */
+#footer {
+	margin-top: 50px;
+	
+ 	width: 1200px;
+    
+    background-color: #e7eaed;
+    /* 기존 배경색 유지 */
+    padding: 20px 20px;
+    /* 여백 */
+    text-align: center; /*가운데 정렬*/
+    font-size: 14px;
+    /* 글자 크기 */
+    color: #333;
+    /* 텍스트 색상 */
+    display: flex;
+    /* 좌우로 정렬 */
+    justify-content: space-between;
+    bottom: 0;
+}
+
+#footer_l {
+    text-align: left;
+    width: 45%;
+    /* 좌우 45% 비율 */
+}
+
+#footer_r {
+    text-align: right;
+    width: 45%;
+}
+
+#footer p {
+    padding: 0px 35px;
+    margin: 5px 0;
+    /* 문단 간 간격 */
+    line-height: 1.6;
+}
+
+#footer_l p:first-child,
+#footer_r p:first-child {
+    font-weight: bold;
+    /* 첫 번째 문구 강조 */
+}
+
+/*aside*/
+#aside h2 {
+    background-color: #ddd;
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 60px;
+    /*세로 중심에 놓으려면 높이와 라인높이를 같은 숫자로 한다.*/
+}
+
+#aside ul>li {
+    border: 1px solid #a6a6a6;
+    font-size: 15px;
+    padding: 8px 0 8px 10px;
+    margin-top: 5px;
+}
+
+/* main */
+#main h3 {
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+#main ul {
+    float: right;
+}
+
+#main ul>li {
+    float: left;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+#main ul>li:not(:last-child)::after {
+    content: ">";
+    margin: 0 10px;
+}
+
+/* 헤더가 가리지 않도록 패딩 추가 */
+
+/*간격조절용*/
+.form-box {
+    /* background-color: #79b30b; */
+    width: 1000px;
+    height: 110px;
+}
+

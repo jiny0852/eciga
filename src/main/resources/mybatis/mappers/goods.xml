@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="goods">
+
+<!-- 쿼리문작성 -->
+
+
+	<!-- goodsList 전체 가져오기 -->
+	<select id="selectList" resultType="com.javaex.vo.GoodsVo">
+
+		<![CDATA[
+
+			SELECT  l.fno gno,
+					g.name,
+        			g.price,
+       			 	c.color,
+       			 	g.imgname imgName
+       			 	
+			FROM listgoods l
+			JOIN goods g ON l.gno = g.gno
+			JOIN color c ON l.color = c.cno
+			
+
+		]]>
+
+	</select>
+	
+	
+	<!-- goods Read 한페이지 가져오기 -->
+	<select id="selectRead" parameterType="int" resultType="com.javaex.vo.GoodsVo">
+
+
+		<![CDATA[
+		
+			SELECT  l.fno,
+					g.gno,
+					g.name,
+        			g.price,
+       			 	c.color,
+       			 	g.imgname imgName
+       			 	
+			FROM listgoods l
+			JOIN goods g ON l.gno = g.gno
+			JOIN color c ON l.color = c.cno
+			
+		    where l.fno = #{no}
+			
+		]]>
+		
+	</select>
+
+	
+	<!-- 장바구니 소매넣기 -->
+	<insert id="insertCart" parameterType="com.javaex.vo.CartVo">
+	
+		<![CDATA[
+
+			insert into cart ( uNo, fNo, count )
+			values ( #{uNo}, #{fNo}, #{count} )
+
+		]]>
+
+	</insert>
+
+
+
+	<!-- goodsList 전체 가져오기 -->
+	<select id="selectCartList" resultType="com.javaex.vo.CartVo">
+
+		<![CDATA[
+
+			SELECT  c.cno,
+					c.uno,
+        			c.fno,
+       			 	c.count,
+        			lg.gno gno,
+        			lg.imgname imgName,
+        			lg.name,
+        			lg.price
+       			 	
+			FROM cart c
+			
+			JOIN ( SELECT   l.fno fno,
+			   				l.gno,
+			  				g.name,
+			  				g.price,
+              			 	g.imgname
+				   FROM listgoods l
+				   JOIN goods g ON l.gno = g.gno) lg ON lg.fno = c.fno
+					
+			WHERE UNO = #{uNo}
+			
+
+		]]>
+
+	</select>
+
+
+
+
+
+
+
+
+</mapper>

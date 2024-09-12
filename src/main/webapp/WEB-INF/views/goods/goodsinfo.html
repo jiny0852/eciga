@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품 구매</title>
+    <link href="../../../assets/css/goods.css" rel="stylesheet" type="text/css">
+    <link href="../../../assets/css/common.css" rel="stylesheet" type="text/css">
+    <link href="../../../assets/css/reset.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header" class="clearfix">
+            <h1 class="header-inner">
+                <a href="#"><img src="../../../assets/img/icon/logo.png"></a>
+            </h1>
+
+            <!-- 로그인했을때 -->
+            <c:if test="${sessionScope.authUser != null}">
+                <ul>
+                    <li><span id="welcome">고객 님 안녕하세요^^</span></li>
+                    <li><a href="" class="btn_s"><img src="../../../assets/img/icon/logout_1.png" alt="log-out" title="로그아웃"></a></li>
+                    <li><a href="" class="btn_s"><img src="../../../assets/img/icon/btn_cart.png" alt="cart" title="장바구니"></a></li>
+                    <li><a href="" class="btn_s"><img src="../../../assets/img/icon/btn_gnb_customer.png" alt="qna" title="문의사항"></a></li>
+                    <li><a href="" class="btn_s"><img src="../../../assets/img/icon/btn_gnb_mypage.png" alt="mypage" title="마이페이지"></a></li>
+                </ul>
+            </c:if>
+
+            <!-- 로그인 안했을때 -->
+            <c:if test="${sessionScope.authUser == null}">
+                <!-- <ul>
+                <li><a href="" class="btn_s"><img src="../../assets/img/icon/btn_cart_c.png"></a></li>
+                <li><a href="" class="btn_s"><img src="../../assets/img/icon/btn_gnb_customer_c.png"></a></li>
+                <li><a href="" class="btn_s"><img src="../../assets/img/icon/btn_gnb_mypage_c.png"></a></li>
+            </ul> -->
+            </c:if>
+        </div>
+        <!-- //header -->
+
+        <div id="product-container">
+            <!-- 상품 이미지 및 정보 -->
+            <div id="product-info">
+                <!-- 상품 이미지 -->
+                <div class="product-image">
+                    <img src="../../../assets/img/hybrid30cce/hybrid30cce_brown.jpg" alt="상품 이미지">
+                </div>
+
+                <!-- 상품 상세 정보 -->
+                <div class="product-details">
+                    <h1>하이브리드 3.0 카고컨테이너 에디션</h1>
+                    <p class="product-price">99,000원</p>
+
+                    <!-- 색상 선택 -->
+                    <div class="product-colors">
+                        <span>색상:</span>
+                        <div class="color-options">
+                            <div class="color-circle" style="background-color: #d4b484;"></div>
+                            <div class="color-circle" style="background-color: #4e4a2e;"></div>
+                        </div>
+                    </div>
+
+                    <!-- 수량 선택 -->
+                    <div class="quantity-selection">
+                        <span>수량</span>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn" onclick="decreaseQuantity()">&#60;</button>
+                            <input type="number" id="quantity" value="1" min="1">
+                            <button class="quantity-btn" onclick="increaseQuantity()">&#62;</button>
+                        </div>
+                    </div>
+
+                    <!-- 가격 정보 -->
+                    <div class="total-price">
+                        <span>가격</span>
+                        <p>99,000원</p>
+                    </div>
+
+                    <!-- 구매 버튼 -->
+                    <div class="purchase-button">
+                        <button>장바구니에 담기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function decreaseQuantity() {
+            var qty = document.getElementById("quantity");
+            if (qty.value > 1) {
+                qty.value--;
+            }
+        }
+
+        function increaseQuantity() {
+            var qty = document.getElementById("quantity");
+            qty.value++;
+        }
+    </script>
+</body>
+
+</html>

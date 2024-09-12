@@ -1,0 +1,382 @@
+@charset "UTF-8";
+
+/* 제품 추가 버튼 스타일 */
+#btnAddgoods {
+	width: 200px;
+	height: 50px;
+	background-color: #4CAF50;
+	/* 버튼 배경색 */
+	color: white;
+	border: none;
+	border-radius: 5px;
+	/* 버튼 모서리 둥글게 */
+	font-size: 16px;
+	cursor: pointer;
+	margin-right: 20px;
+	/* 테이블과 버튼 사이 간격 */
+	align-self: flex-start;
+	/* 버튼을 상단에 정렬 */
+}
+
+#btnAddgoods:hover {
+	background-color: #45a049;
+	/* 호버 시 색상 변경 */
+}
+
+#btnAddgoodsBox {
+	padding: 30px 60px 10px 0;
+	text-align: right;
+}
+
+/* 사진 테이블 */
+#gal-field {
+	display: flex;
+	justify-content: center;
+	/* 중앙 정렬 */
+	align-items: flex-start;
+	margin-bottom: 20px;
+}
+
+#gal-table {
+	border-collapse: collapse;
+}
+
+#gal-table>tbody>tr>td {
+	padding: 20px;
+	/* 여백 추가 */
+	text-align: center;
+	/* 각 셀 내용 중앙 정렬 */
+}
+
+.photo {
+	width: 200px;
+}
+
+figcaption {
+	margin-top: 5px;
+	font-size: 14px;
+	text-align: center;
+	/* 캡션 중앙 정렬 */
+}
+
+/*게시판 목록*/
+.base-board {
+	padding-left: 195px;
+}
+
+#board {
+	font-size: 15px;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+#board thead>tr>th {
+	color: #000000;
+	border-bottom: 2px solid #eaeaea;
+	height: 40px;
+}
+
+#board tbody>tr {
+	border-bottom: 1px dotted #dddddd;
+	height: 40px;
+}
+
+#board tbody>tr:hover {
+	background-color: #ddfae9;
+}
+
+.userMng {
+	width: 100%;
+}
+
+/*기간조회 버튼 스타일*/
+.period-filter {
+	margin: 15px 0;
+}
+
+.period-btn {
+	background-color: white;
+	border: 1px solid #ccc;
+	border-radius: 20px;
+	padding: 8px 12px;
+	font-size: 13px;
+	cursor: pointer;
+}
+
+.search-bar {
+	float: right;
+}
+
+.serch-btn {
+	background-color: #64b5f6;
+	color: white;
+	border: none;
+	border-radius: 20px;
+	padding: 8px 15px;
+	font-size: 14px;
+	cursor: pointer;
+	text-align: center;
+}
+
+.search-btn:hover {
+	background-color: #c20f8c;
+	color: white;
+}
+
+.period-btn.active {
+	background-color: black;
+	color: white;
+}
+
+.period-label {
+	font-size: 16px;
+	margin-right: 10px;
+}
+
+.date-input {
+	border: 1px solid #ccc;
+	border-radius: 20px;
+	padding: 8px;
+	font-size: 14px;
+	text-align: center;
+}
+
+.search-btn {
+	background-color: #64b5f6;
+	color: white;
+	border: none;
+	border-radius: 20px;
+	padding: 8px 15px;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+/* 테이블 스타일링 */
+table.userMng th, table.userMng td {
+	text-align: center;
+	padding: 10px;
+	border-bottom: 1px solid #ddd;
+}
+
+/* 분류 열의 너비 조정 */
+table.userMng th:nth-child(2), /* 두 번째 열의 헤더 */ table.userMng td:nth-child(2)
+	{ /* 두 번째 열의 데이터 */
+	width: 30px; /* 너비를 적절히 줄임 */
+	white-space: nowrap; /* 텍스트가 줄 바꿈되지 않도록 함 */
+}
+
+.form-group_text-right {
+	padding: 10px;
+	text-align: right;
+}
+
+/*검색바*/
+#serch {
+	background-color: #fff;
+	float: right;
+	margin-top: 20px
+}
+
+#serch #bar {
+	border: 1px solid #c0c0c0;
+	border-radius: 5px;
+	width: 130px;
+	height: 25px;
+}
+
+#serch #btn-click {
+	width: 60px;
+	height: 27px;
+}
+
+/*게시판 하단 페이지 수 표시*/
+#paging ul {
+	padding: 15px 0px 0 450px;
+}
+
+#paging ul>li {
+	box-sizing: border-box;
+	float: left;
+	width: 25px;
+	text-align: center;
+	font-size: 10px;
+}
+
+#paging ul>li:nth-child(6) {
+	content: "";
+	font-weight: bold;
+}
+
+/*질문/답변*/
+#MannagerAnswerArea {
+	height: 320px;
+	padding: 20px;
+	margin: 27px;
+	font-size: 25px;
+	border-top: 2px dotted #aceeff;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.qna-container {
+	width: 100%; /* 전체 화면의 80% 너비로 설정 */
+	padding: 20px;
+	margin: 20px auto; /* 중앙 정렬 */
+	background-color: #f9f9f9;
+	border: 1px solid #ddd;
+	box-sizing: border-box;
+	overflow: hidden; /* float 사용 시 부모 요소의 높이 문제를 해결하기 위한 clearfix */
+}
+
+.qna-left, .qna-right {
+	width: 45%; /* 두 영역의 너비를 45%로 설정하여 한 줄에 나오게 함 */
+	padding: 20px;
+	background-color: white;
+	border-radius: 8px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	float: left; /* 왼쪽, 오른쪽 각각 float로 설정 */
+}
+
+.qna-left {
+	margin-right: 30px; /* 오른쪽 영역과 간격을 유지 */
+}
+
+/* 관리자 답변부 스타일 재배치 */
+.qna-right h3 {
+	font-size: 18px;
+	margin-bottom: 24px;
+}
+
+/* 답변 내용 스타일 */
+/* 답변 내용과 처리 상태를 한 줄로 배치하기 위한 스타일 */
+.response-container {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.response-item {
+	width: 100%;
+	margin: 10px 0 auto;
+}
+
+.status-container {
+	float: right;
+	width: 20%;
+	margin-top: -60px; /* 처리 상태를 위로 올리기 위한 값 */
+	text-align: right;
+}
+
+select#status {
+	padding: 8px;
+	width: 100%;
+	border: 1px solid #000;
+	border-radius: 4px;
+}
+
+/* 등록 버튼 */
+.register-btn-container {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin-top: 20px;
+}
+
+.register-btn {
+	padding: 10px 20px;
+	background-color: #64b5f6;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.register-btn:hover {
+	background-color: #57a0d6;
+}
+
+.qna-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.qna-table th, .qna-table td {
+	padding: 10px;
+	border: 1px solid #ddd;
+	text-align: left;
+}
+
+.qna-right label {
+	font-weight: bold;
+}
+
+.qna-right textarea#answer {
+	width: 100%; /* textarea의 너비를 부모 요소에 맞게 조정 */
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	resize: none;
+	box-sizing: border-box; /* padding을 포함한 너비 계산 */
+}
+
+.submit-btn {
+	padding: 10px 20px;
+	background-color: #64b5f6;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 10px;
+}
+
+.product-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: center; /* 가운데 정렬 */
+}
+
+.product-item {
+	text-align: center;
+	width: 200px;
+	margin: 10px;
+}
+
+.product-image {
+	width: 130px;
+	height: auto;
+}
+
+.edit-btn {
+	display: inline-flex;
+	align-items: center;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	padding: 5px 10px;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-top: 5px;
+}
+
+.edit-icon {
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+}
+
+/* 배송 상태 - 기본 상태 */
+.status-default {
+	color: black;
+	font-weight: normal;
+}
+
+/* 확인 요망 (빨간색 굵은 글씨) */
+#pending {
+	color: red;
+	font-weight: bold;
+}
+
+/* 배송 완료 (연녹색 글씨) */
+#completed {
+	color: lightgreen;
+	font-weight: normal;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원 로그인</title>
+    <link href="../../../assets/css/common.css" rel="stylesheet" type="text/css">
+    <link href="../../../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../../../assets/css/admin.css" rel="stylesheet" type="text/css">
+    
+    <link href="../../../assets/css/login.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <div id="wrap">
+
+        <!-- header -->
+        <div id="header" class="clearfix">
+            <h1 class="header-inner">
+                <a href="#"><img src="../../../assets/img/icon/logo.png" alt="Logo"></a>
+            </h1>
+
+            <!-- 로그인 안했을때 -->
+            <c:if test="${sessionScope.authUser == null}">
+                <!-- Uncomment if needed -->
+            </c:if>
+        </div>
+        <!-- //header -->
+
+        <!-- navigation -->
+        <div id="nav">
+            <h1>회원 로그인</h1>
+        </div>
+        <!-- //navigation -->
+
+        <!-- login-container -->
+        <div id="login-container">
+            <form id="login-form">
+                <input type="text" id="email" placeholder="아이디" required><br>
+                <input type="password" id="password" placeholder="비밀번호" required><br>
+                <button type="submit" id="login-btn">로그인</button>
+            </form>
+            <div id="links">
+                <!-- <a href="#">아이디 찾기</a> | 
+                <a href="#">비밀번호 재설정</a> |  -->
+                <a href="#">회원가입</a>
+            </div>
+        </div>
+        <!-- //login-container -->
+
+        <!-- footer -->
+        <div id="footer">
+            <div id="footer_l">
+                <p>서울시 서초구 강남대로 405 통영빌딩 8층</p>
+                <p>상호명:(주)ElecCigaMarket 대표자 : 황일영</p>
+                <p>사업자 등록번호 : 506 - 79 - 45687</p>
+                <p>Copyright ⓒ 2024 하이미디어 All right reserved</p>
+            </div>
+            <div id="footer_r">
+                <p>주문 취소/교환 불가합니다^^</p>
+                <p>게시판문의(전화상담은 운영하지 않습니다)</p>
+                <p>평일 12:00~16:00</p>
+                <p>1588-7585</p>
+            </div>
+        </div>
+        <!-- //footer -->
+
+    </div>
+    <!-- //wrap -->
+</body>
+
+</html>

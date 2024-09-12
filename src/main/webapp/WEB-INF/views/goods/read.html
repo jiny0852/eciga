@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>ECIGA</title>
+
+    <link rel="stylesheet" href="../../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../../assets/css/gallery.css">
+    <link rel="stylesheet" href="../../../assets/css/common.css">
+
+
+
+
+</head>
+
+
+
+
+
+
+<body>
+
+
+    <div id="wrap">
+
+
+
+        <div id="header" class="clearfix">
+            <h1 class="header-inner">
+                <a href=""><img src="../../../assets/img/icon/logo.png"></a>
+            </h1>
+
+            <!-- 로그인했을때 -->
+            <c:if test="${sessionScope.authUser != null}">
+                <ul>
+                    <li><span id="welcome">고객 님 안녕하세요^^</span></li>
+                    <li><a href="" class="btn_s"><img src="../../../assets/img/icon/btn_cart.png"></a></li>
+                    <li><a href="" class="btn_s"><img src="../../../assets/img/icon/btn_gnb_customer.png"></a></li>
+                    <li><a href="" class="btn_s"><img src="../../../assets/img/icon/btn_gnb_mypage.png"></a></li>
+                </ul>
+            </c:if>
+
+            <!-- 로그인 안했을때 -->
+            <c:if test="${sessionScope.authUser == null}">
+                <!-- <ul>
+                <li><a href="" class="btn_s"><img src="../../assets/img/icon/btn_cart_c.png"></a></li>
+                <li><a href="" class="btn_s"><img src="../../assets/img/icon/btn_gnb_customer_c.png"></a></li>
+                <li><a href="" class="btn_s"><img src="../../assets/img/icon/btn_gnb_mypage_c.png"></a></li>
+            </ul> -->
+            </c:if>
+        </div>
+        <!-- //header -->
+
+        <!-- <c:import url="/WEB-INF/views/include/header.jsp"></c:import> -->
+
+        <!-- 메인바디 시작 -->
+         <div id="content">
+
+            <div id="sub_contents">
+
+                <!-- 제품 상단 -->
+                <div id="item_box" class="clearfix">
+
+                    <div id="item_img_box">
+                        <!--  -->
+                        <img src="../../../assets/img/hybrid30/hybrid_black_small.png">
+
+                    </div>
+
+                    <div id="item_info_box">
+
+                        <form name="itemView" id="itemView" method="post">
+
+                            <div id="itemName">하이브리드 3.0 카고컨테이너 에디션</div>
+                            <div id="itemPrice">99,000원</div>
+                            <div> <!-- 색깔버튼 -->
+                                <div class="imgItemColor">
+                                    <div class="itemGrid">
+                                        <div><button class="color-circle black"></button></div>
+                                        <div><button class="color-circle red"></button></div>
+                                        <div><button class="color-circle blue"></button></div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group-count">
+                                <label for="itemCount">수량</label>
+                                <button type="button"><img src="#">+</button>
+                                <span id="itemCount" >1</span>
+                                <button type="button"><img src="#">-</button>
+                            </div>
+                            <div class="form-group-price">
+                                <label for="totalPrice">가격</label>
+                                <span id="totalPrice">99,000원</span>
+                            </div>
+
+
+                            <button type="submit">장바구니에 담기</button>
+
+
+                        </form>
+
+
+                    </div>
+
+                    
+
+
+
+                </div>
+
+                <!-- 제품 설명이미지 -->
+                <div id="item-read" class="clearfix">
+                    <img src="../../../assets/img/hybrid30/hybri30_content.jpg">
+                    <!-- <img src="#"> -->
+
+
+                </div>
+    
+                <!-- 제품 추가설명 -->
+                <div id="item-line" class="clearfix">
+
+                    <div class="additional-info">
+                        <div class="info-item">
+                            <span class="info-title">AS/결제</span>
+                            <span class="info-image"><img src="#"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-title">문의</span>
+                            <span class="info-image"><img src="#"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-title">배송</span>
+                            <span class="info-image"><img src="#"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-title">반품</span>
+                            <span class="info-image"><img src="#"></span>
+                        </div>
+                    </div>
+                    
+    
+    
+    
+                </div>
+
+
+            </div>
+
+
+
+
+
+         </div>
+         <!-- 메인바디 끝-->
+
+
+
+
+        <!-- <c:import url="/WEB-INF/views/include/header.jsp"></c:import> -->
+
+
+        <div id="footer">
+            <div id="footer_l">
+                <p>서울시 서초구 강남대로 405 통영빌딩 8층</p>
+                <p>상호명:(주)ElecCigaMarket 대표자 : 황일영</p>
+                <p>사업자 등록번호 : 506 - 79 - 45687</p>
+                <p>Copyright ⓒ 2024 하이미디어 All right reserved</p>
+            </div>
+            <div id="footer_r">
+                <p>주문 취소/교환 불가합니다^^</p>
+                <p>게시판문의(전화상담은 운영하지 않습니다)</p>
+                <p>평일 12:00~16:00</p>
+                <p>1588-7585</p>
+            </div>
+        </div>
+    
+
+    </div>
+
+    
+</body>
+</html>

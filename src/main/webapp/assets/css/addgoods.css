@@ -1,0 +1,282 @@
+@charset "UTF-8";
+
+/* 모달 배경 */
+.modal {
+    display: none; /* 처음에 숨김 처리 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* 어두운 배경 */
+    z-index: 1000; /* 페이지 위로 올라오도록 */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px; /* 내부 여백은 20px */
+    border-radius: 8px;
+    width: 500px; /* 가로 크기는 유지 */
+    height: auto; /* 내용에 따라 자동 조정 */
+    max-height: calc(100vh - 50px); /* 화면 높이보다 50px 작은 크기로 제한 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* 내용이 넘칠 경우 스크롤 */
+}
+
+.mdform-group {
+    margin-bottom: 20px; /* 각 폼 항목 간의 간격을 20px로 설정 */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px; /* 라벨과 입력 필드 간의 간격 */
+    font-weight: bold; /* 라벨 텍스트를 굵게 */
+}
+
+input[type="text"],
+input[type="file"],
+textarea {
+    width: 100%;
+    padding: 12px; /* 입력 필드 안쪽 여백 */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* padding 포함 너비 계산 */
+}
+
+textarea {
+    resize: none;
+}
+
+.mdbutton-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; /* 버튼 그룹과 폼 간격 */
+}
+
+.mdbutton-group button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+}
+
+.mdbutton-group button:hover {
+    background-color: #218838;
+}
+
+.mdbutton-group button[type="reset"] {
+    background-color: #dc3545;
+}
+
+.mdbutton-group button[type="reset"]:hover {
+    background-color: #c82333;
+}
+
+/* 색상 선택 버튼들 */
+.black, .black:hover{
+    background-color: #000000;
+}
+
+
+.white, .white:hover{
+    background-color: #ffffff;
+}
+
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    justify-items: center; /* 그리드 내 아이템 수평 중앙 정렬 */
+}
+
+.color-grid div {
+    display: flex;
+    flex-direction: column; /* 아이템을 세로로 정렬 */
+    align-items: center; /* 아이템 수평 정렬 */
+    justify-content: center; /* 아이템 수직 정렬 */
+    text-align: center;
+}
+
+.color-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.color-grid p {
+    margin-top: 5px;
+    font-size: 12px; /* 색상 이름 텍스트 크기 */
+    text-align: center;
+}
+
+/* 이미지 미리보기 스타일 */
+.image-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-preview img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover; /* 이미지 비율에 맞춰 잘라냄 */
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* 삭제 아이콘 스타일 (X 표시) */
+.delete-icon {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+/* 장바구니 */
+.cart-layout {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.cart-item {
+	display: flex;
+	align-items: center;
+	width: 55%;
+}
+
+.product-image {
+	width: 100px;
+	height: 100px;
+	margin-right: 20px;
+}
+
+.item-details {
+	flex-grow: 1;
+}
+
+.product-name {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.product-color {
+	font-size: 14px;
+	color: #666;
+}
+
+.quantity-selector {
+	display: flex;
+	align-items: center;
+}
+
+.quantity-btn {
+	background-color: #ddd;
+	border: none;
+	padding: 5px;
+	cursor: pointer;
+}
+
+.quantity-value {
+	margin: 0 10px;
+}
+
+.price-box {
+	width: 20%;
+	text-align: right;
+}
+
+.product-price {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.order-summary {
+	width: 35%;
+	background-color: #f9f9f9;
+	padding: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.order-box {
+	text-align: right;
+	width: 100%;
+}
+
+.order-box p {
+	margin: 10px 0;
+}
+
+.coupon-input {
+	display: flex;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+.coupon-input input {
+	width: 70%;
+	padding: 5px;
+	margin-right: 10px;
+	border: 1px solid #ccc;
+}
+
+.coupon-btn {
+	padding: 5px 10px;
+	background-color: #5dbcd2;
+	border: none;
+	color: white;
+	cursor: pointer;
+}
+
+.total-price {
+	font-size: 18px;
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+.order-btn {
+	padding: 10px 20px;
+	background-color: #5dbcd2;
+	border: none;
+	color: white;
+	cursor: pointer;
+	width: 100%;
+	text-align: center;
+	margin-top: 20px;
+}
+
+/* 헤더와 네비게이션 */
+#nav h1 {
+	text-align: center;
+	margin: 30px 0;
+}
+

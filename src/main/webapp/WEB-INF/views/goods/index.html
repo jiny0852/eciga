@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>ECIGA</title>
+
+    <!-- <link href="http://localhost:8888/mysite/assets/css/mysite.css" rel="stylesheet" type="text/css"> -->
+
+    
+    <link rel="stylesheet" href="../../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../../assets/css/gallery.css">
+    <link rel="stylesheet" href="../../../assets/css/common.css">
+
+</head>
+
+
+
+<body>
+
+
+    
+
+    <div id="wrap">
+
+
+
+        <div id="header" class="clearfix">
+            <h1 class="header-inner">
+                <a href=""><img src="../../../assets/img/icon/logo.png"></a>
+            </h1>
+
+            <!-- 로그인했을때 -->
+            <c:if test="${sessionScope.authUser != null}">
+                <ul>
+                    <li><span id="welcome">고객 님 안녕하세요^^</span></li>
+                    <li><a href="" class="btn_s"><img src="../../../assets/img/icon/btn_cart.png"></a></li>
+                    <li><a href="" class="btn_s"><img src="../../../assets/img/icon/btn_gnb_customer.png"></a></li>
+                    <li><a href="" class="btn_s"><img src="../../../assets/img/icon/btn_gnb_mypage.png"></a></li>
+                </ul>
+            </c:if>
+
+            <!-- 로그인 안했을때 -->
+            <c:if test="${sessionScope.authUser == null}">
+                <!-- <ul>
+                <li><a href="" class="btn_s"><img src="../../assets/img/icon/btn_cart_c.png"></a></li>
+                <li><a href="" class="btn_s"><img src="../../assets/img/icon/btn_gnb_customer_c.png"></a></li>
+                <li><a href="" class="btn_s"><img src="../../assets/img/icon/btn_gnb_mypage_c.png"></a></li>
+            </ul> -->
+            </c:if>
+        </div>
+        <!-- //header -->
+
+        <!-- <c:import url="/WEB-INF/views/include/header.jsp"></c:import> -->
+
+
+
+
+
+
+        <div id="container" class="clearfix">
+
+            <div class="top_area clearfix"></div>
+
+            <!-- 메인바디 시작 -->
+            <div id="content">
+
+                <!-- 메인 상단 -->
+                <div id="content-head" class="clearfix">
+
+                    <div id="main-header">
+                        
+                        <div id="main-header-left">
+
+                            <h1>ECiga OnlineMall</h1>
+                            
+                            <h2>이식아만의 다양한 제품을 만나보세요!</h2>
+
+                        </div>
+
+                        <div id="main-header-right">
+                            <img src="../../../assets/img/icon/img_mall_top.png">
+
+                        </div>
+                        
+                           
+                        
+                            
+
+                    </div>
+
+                </div>
+                <!-- //content-head 메인 상단 -->
+
+                <div id="gallery-txt" class="clearfix">
+                    <h1>디바이스</h1>
+                </div>
+
+                <div id="gallery" class="clearfix">
+
+
+                    <div id="list">
+                        
+                        <!-- 제품 하나 출력 -->
+                        <ul id="viewArea">
+                            <li>
+                                <div class="view">
+                                    <div class="itemimg">
+                                        <img  src="../../../assets/img/hybrid30/hybrid_black_small.jpg">
+                                    </div>
+                                    <div class="imgItemColor">
+                                        <div class="itemGrid">
+                                            <div><button class="color-circle black"></button></div>
+                                            <div><button class="color-circle red"></button></div>
+                                            <div><button class="color-circle blue"></button></div>
+                                            
+                                        </div>
+                                    </div>
+
+                                    <div class="itemName">하이브리드 3.0 카고컨테이너 에디션</div>
+                                    <div class="itemPrice">99,000원</div>
+                                </div>    
+
+                            </li>
+                            <li>
+                                <div class="view">
+                                    <img>제품사진2
+                                    <img>색상2
+                                    <div>제품명2</div>
+                                    <div>가격2</div>
+                                </div>    
+
+                            </li>
+                            <li>
+                                <div class="view">
+                                    <img>제품사진3
+                                    <img>색상3
+                                    <div>제품명3</div>
+                                    <div>가격3</div>
+                                </div>    
+
+                            </li>
+                            <li>
+                                <div class="view">
+                                    <img>제품사진4
+                                    <img>색상4
+                                    <div>제품명4</div>
+                                    <div>가격4</div>
+                                </div>    
+
+                            </li>
+
+                        </ul>
+
+
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+            </div>
+            <!-- //메인바디 -->
+
+
+        </div>
+
+        <!-- <c:import url="/WEB-INF/views/include/header.jsp"></c:import> -->
+
+        <div id="footer">
+            <div id="footer_l">
+                <p>서울시 서초구 강남대로 405 통영빌딩 8층</p>
+                <p>상호명:(주)ElecCigaMarket 대표자 : 황일영</p>
+                <p>사업자 등록번호 : 506 - 79 - 45687</p>
+                <p>Copyright ⓒ 2024 하이미디어 All right reserved</p>
+            </div>
+            <div id="footer_r">
+                <p>주문 취소/교환 불가합니다^^</p>
+                <p>게시판문의(전화상담은 운영하지 않습니다)</p>
+                <p>평일 12:00~16:00</p>
+                <p>1588-7585</p>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    
+</body>
+</html>

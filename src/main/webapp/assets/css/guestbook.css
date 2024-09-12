@@ -1,0 +1,82 @@
+#content {
+    width: 100%; /* Ensure full width within the container */
+    margin: 0 auto;
+    text-align: center;
+
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+    width: 100%; /* Full width form for better responsiveness */
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold; /* No conflict with other text elements */
+}
+
+input, select, textarea {
+    width: 100%; /* Consistent with other form inputs */
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: none; /* Maintain fixed size, no conflict */
+    height: 300px;
+}
+
+#guestAdd {
+    width: 90%; /* Keep the guestAdd element full-width */
+    display: flex;
+    justify-content: center; /* Horizontally center the button */
+    
+}
+
+#guestAdd button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#guestAdd button:hover {
+    background-color: #45a049; /* Keep hover effect */
+}
+
+/* Center buttons with flexbox */
+.button-area {
+    margin-top: 10px;
+}
+
+#nav h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Adjust guestbook size and center it */
+#guestbook {
+    width: 100%; /* Adjust width to fit the layout */
+    max-width: 1200px;
+    margin: 0 auto;
+}

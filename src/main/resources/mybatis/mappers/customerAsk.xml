@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="customerAsk">
+
+
+
+
+   <!-- 문의 목록 조회 -->
+   <select id="selectInquiryList" resultType="com.javaex.vo.CustomerAskVo">
+   <![CDATA[
+    SELECT ci.inquiry_no as inquiryNo, ci.title, ci.content, ci.reg_date as regDate, ci.status, ci.answer_date as answerDate, u.name AS userName
+    FROM customer_ask ci
+    JOIN users u ON ci.user_id = u.uno
+    WHERE (ci.status = #{status} OR #{status} IS NULL)
+    AND (ci.title LIKE CONCAT('%', #{keyword}, '%') OR #{keyword} IS NULL)
+    AND (
+         (ci.reg_date BETWEEN #{startDate} AND #{endDate})
+         OR (#{startDate} IS NULL OR #{endDate} IS NULL)  
+       )
+    ORDER BY ci.inquiry_no DESC
+    LIMIT #{startRowNo}, #{listCnt}
+   ]]>
+   </select>
+
+   <!-- 전체 문의 수 조회 -->
+   <select id="getTotalCount" resultType="int">
+    <![CDATA[
+        SELECT COUNT(*)
+        FROM customer_ask
+        WHERE (status = #{status} OR #{status} IS NULL)
+          AND (title LIKE CONCAT('%', #{keyword}, '%') OR #{keyword} IS NULL)
+          AND (reg_date BETWEEN #{startDate} AND #{endDate} OR #{startDate} IS NULL OR #{endDate} IS NULL)
+    ]]>
+   </select>
+
+   <!-- 문의 내용 답변 -->
+   <select id="selectInquiryDetail" resultType="com.javaex.vo.CustomerAskVo">
+    <![CDATA[
+       SELECT 	ci.inquiry_no as inquiryNo, 
+       			ci.title, 
+       			ci.content, 
+       			ci.reg_date as regDate, 
+       			u.hp, 
+       			ci.status, 
+       			ci.answer, 
+       			ci.answer_date as answerDate, 
+       			u.name AS userName
+       FROM customer_ask ci
+       JOIN users u ON ci.user_id = u.uno
+       WHERE ci.inquiry_no = #{inquiryNo}
+    ]]>
+   </select>
+   
+   <!-- 문의 답변 업데이트 -->
+    <update id="updateInquiryAnswer">
+    <![CDATA[
+        UPDATE customer_ask
+        SET answer = #{answer}, status = #{status}, answer_date = NOW()
+        WHERE inquiry_no = #{inquiryNo}
+    ]]>
+    </update>
+    
+    <select id="selectInquiryByNo" resultType="com.javaex.vo.CustomerAskVo">
+    <![CDATA[
+       SELECT   ci.inquiry_no as inquiryNo, 
+       			ci.status, 
+       			ci.answer, 
+       			ci.answer_date as answerDate
+       FROM customer_ask ci
+       JOIN users u ON ci.user_id = u.uno
+       WHERE ci.inquiry_no = #{inquiryNo}
+    ]]>
+	</select>
+    
+
+	
+	
+	
+	
+	
+</mapper>

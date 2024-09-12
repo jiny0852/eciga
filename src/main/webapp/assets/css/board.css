@@ -1,0 +1,118 @@
+/* Customer Inquiry Form */
+#guestbook {
+    margin-top: 30px;
+}
+
+#guestbook form {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#guestbook table {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#guestbook table th, 
+#guestbook table td {
+    padding: 15px;
+    vertical-align: top;
+}
+
+#guestbook th {
+    text-align: left;
+    width: 150px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#guestbook td {
+    width: 100%;
+}
+
+#guestbook input[type="text"],
+#guestbook textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#guestbook textarea {
+    resize: none;
+    height: 150px;
+}
+
+/* Button Styles */
+.button-area {
+    text-align: center;
+}
+
+.button-area button {
+    padding: 12px 25px;
+    font-size: 16px;
+    color: white;
+    background-color: #79b30b;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-area button:hover {
+    background-color: #5a8b08;
+}
+
+/* Admin's Answer Section */
+#answer {
+    margin-top: 30px;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#answer h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+}
+
+.answer-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    text-align: left;
+    padding: 10px 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #guestbook form, 
+    #answer {
+        width: 100%;
+        padding: 15px;
+    }
+
+    #guestbook table th, 
+    #guestbook table td {
+        display: block;
+        width: 100%;
+    }
+
+    .button-area button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}

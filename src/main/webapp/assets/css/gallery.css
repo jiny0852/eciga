@@ -1,0 +1,430 @@
+@charset "UTF-8";
+
+
+/* 공통영역??? */
+#top_area {
+    height: 500px;
+    border: 1px solid #000000;
+    margin-bottom: 500px;
+}
+
+#wrap {
+    padding-top: 100px; /*추가 설정 부분*/
+}
+
+
+
+
+
+/*  메인페이지 제품 리스트 */
+
+/* 리스트 전체 영역 */
+#gallery #viewArea {
+    margin: 10px 0px 10px 0px;
+    
+}
+
+
+/* content-head */
+#main-header {
+    background-color: aqua;
+    height: 200px;
+}
+
+#main-header-left {
+    float: left;
+    margin: 20px 0px 0px 0px;
+
+}
+
+#main-header-left h1 {
+    font-size: 50px; 
+    font-weight: bold; 
+    line-height: 2;
+    margin-left: 30px;
+    
+
+}
+
+#main-header-left h2 {
+    font-size: 20px;  
+    line-height: 0;
+    margin-left: 30px;
+
+}
+
+#main-header-right {
+    float: right;
+    margin: 50px;
+
+    width: 150px;
+    height: 150px;
+}
+
+#main-header-right img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 이미지가 컨테이너를 채우되, 비율을 유지하면서 잘라냄 */
+}
+
+
+
+
+
+/* 상단 간판 */
+
+#gallery-txt {
+    margin: 30px 0px 20px 60px;
+
+}
+
+
+#gallery-txt h1 {
+    font-size: 36px; 
+    font-weight: bold; 
+    line-height: 1.1;
+    float: left; 
+    margin: 10px;
+}
+
+
+/* 리스트 출력  */
+
+#list {
+    margin: 10px;
+    padding: 10px;
+
+}
+
+
+/* 이미지 1개 영역 */
+#gallery .view {
+    width: 350px;
+    height: 500px;
+    margin: 5px 0px 0px 3px;
+
+    /* 추후 삭제 요망 
+    border: 1px solid #000000; */
+    float: left;
+}
+
+#gallery .itemimg {
+    width: 250px;
+    height: 350px;
+    cursor: Pointer;
+    margin: 0 auto;
+
+    
+}
+
+#gallery .itemimg img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 이미지가 컨테이너를 채우되, 비율을 유지하면서 잘라냄 */
+}
+
+#gallery .imgItemColor {
+    width: 250px;
+    height: 35px;
+    cursor: Pointer;
+    padding: 10px;
+    margin: 0 auto;
+}  
+
+/* 제품명 */
+.itemName {
+    
+    width: 250px;
+    height: 35px;
+    padding: 5px;
+    margin: 0 auto;
+
+}
+
+/* 제품가격 */
+.itemPrice {
+    
+    width: 250px;
+    height: 25px;
+    padding: 5px;
+    margin: 0 auto;
+
+}
+
+
+
+
+/* 색상 선택 동그라미 */
+.itemGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-height: 150px;
+    overflow-y: auto;
+    text-align: center;
+}
+
+.itemGrid div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20;
+}
+
+.color-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.black {
+    background-color: #000000;
+}
+
+.red {
+    background-color: #ff0000;
+}
+
+.blue {
+    background-color: #0000ff;
+}
+
+
+
+
+
+/*#########################################*/
+/*  제품상세보기  */
+
+
+
+
+/* 제품 상단 */
+#sub_contents {
+    display: grid;
+    place-items: center;
+}
+
+
+
+/*제품 사진 박스*/
+#item_box > #item_img_box {
+
+    width: 400px;
+    height: 650px;
+
+   
+    float:left;
+
+
+}
+
+
+/*제품 입력 폼*/
+#item_box > #item_info_box {
+
+    width: 400px;
+    height: 650px;
+
+    /*border: 2px solid #000000;*/
+    float:left;
+
+    padding-top: 100px;
+
+
+
+}
+
+
+
+
+
+/* 제품 상세설명이미지 박스 */
+#item-read {
+
+    width: 600px;
+    height: auto;
+
+    border: 2px solid #000000;
+    background-color: burlywood;
+
+}
+
+
+
+
+/* 제품 추가설명 박스 */
+#item-line {
+
+    width: 1000px;
+    height: 200px;
+
+    border: 2px solid #000000;
+
+    padding: 30px;
+
+}
+
+
+/* 폼 스타일링 */
+#itemView {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+#itemName {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#itemPrice {
+    font-size: 22px;
+    color: #000000;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.imgItemColor {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.itemGrid {
+    display: flex;
+}
+
+.color-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    margin: 0 8px;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+
+
+
+.color-circle:hover {
+    border-color: #333;
+    transform: scale(1.1);
+}
+
+#itemCount, #totalPrice {
+    font-size: 25px;
+    color: #000000;
+    margin: 20px 0;
+    
+}
+
+#form-group-count, #form-group-price {
+    margin-bottom: 10px;
+}
+
+
+
+button[type="submit"] {
+    background-color: #0ef0e4;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0ef0e4;
+    transform: scale(1.05);
+}
+
+button[type="submit"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #0ef0e4;
+}
+
+
+
+
+
+/* 추가 정보 섹션 스타일링 */
+.additional-info {
+    display: flex;
+    flex-wrap: wrap; /* 항목들이 여러 줄로 배치되도록 설정 */
+    justify-content: space-between; /* 항목들 사이의 간격 조절 */
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between; /* 제목과 이미지를 양끝으로 배치 */
+    align-items: center; /* 수직 정렬 */
+    width: 48%; /* 두 개의 항목이 한 줄에 들어가도록 설정 */
+    padding: 10px;
+    margin-bottom: 10px; /* 항목 사이의 간격 추가 */
+    box-sizing: border-box; /* 패딩과 마진을 포함한 전체 너비 조절 */
+}
+
+.info-item:nth-child(odd) {
+    border-right: 1px solid #ddd; /* 홀수 항목에 오른쪽 구분선 추가 */
+}
+
+.info-item:last-child {
+    border-right: none; /* 마지막 항목의 구분선 제거 */
+}
+
+.info-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.info-image img {
+    width: 30px; /* 이미지 크기 조정 */
+    height: auto; /* 이미지 비율 유지 */
+}
+
+
+
+
+
+/* 제품 설명 이미지 */
+#item-read, #item_img_box {
+    max-width: 100%;
+    text-align: center; /* 이미지 중앙 정렬 */
+    margin: 20px 0; /* 상하 여백 */
+}
+
+#item_img_box, #item-read img {
+    max-width: 100%;
+    height: auto; /* 이미지 비율 유지 */
+    display: inline-block; /* 인라인 블록으로 중앙 정렬 */
+}
+
+
+
+
+
+
+
+

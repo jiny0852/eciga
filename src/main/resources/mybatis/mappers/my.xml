@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="my">
+
+	<select id="selectPurchase" parameterType="int" resultType="com.javaex.vo.PurchaseVo">
+		<![CDATA[   
+			select  d.order_no,
+     			 	d.user_id,
+ 			 	    d.delivery_status,
+    	    		d.purchase_confirm_date,
+        			d.payment_status,
+        			d.payment_method,
+        			d.payment_amount,
+      			  	u.uid,
+     			  	u.name as user_name,
+      			  	u.hp,
+      		  		u.address
+				from delivery d JOIN users u ON d.user_id = u.uNo
+				where d.user_id = #{uno}
+	]]>
+	</select>
+
+	<select id="selectBoard" parameterType="int" resultType="com.javaex.vo.PurchaseVo">
+		<![CDATA[   
+			select  inquiry_no,
+					user_id,
+					title,
+					content,
+					reg_date,
+					status,
+					answer,
+					answer_date
+				from customer_ask
+				where user_id = 22
+	]]>
+	</select>
+
+	<update id="update">
+        <![CDATA[
+        UPDATE delivery
+        SET delivery_status = #{delivery_status}
+        WHERE order_no = #{order}
+        ]]>
+	</update>
+
+
+
+</mapper>

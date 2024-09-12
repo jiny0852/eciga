@@ -1,0 +1,62 @@
+/* General styles for the wrap element */
+#wrap {
+    max-width: 1200px; /* Maximum width for larger screens */
+    margin: 0 auto; /* Centering horizontally */
+    padding: 0 15px; /* Padding for better spacing */
+}
+
+/* Header styles */
+/* Login container styles */
+#login-container {
+    text-align: center; /* Center form and links */
+    padding: 20px; /* Padding around login container */
+}
+
+#login-form {
+    display: inline-block; /* Center the form */
+    margin: 0 auto; /* Center form horizontally */
+}
+
+#login-form input, #login-form button {
+    display: block;
+    width: 100%; /* Full width for inputs and button */
+    margin-bottom: 10px; /* Space between elements */
+    padding: 10px; /* Padding inside inputs and button */
+    font-size: 16px; /* Font size for inputs and button */
+}
+
+#login-btn {
+    background-color: #4CAF50; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+#login-btn:hover {
+    background-color: #45a049; /* Button hover effect */
+}
+
+/* Links styles */
+#links a {
+    text-decoration: none; /* Remove underline from links */
+    color: #007BFF; /* Link color */
+    font-size: 16px; /* Font size for links */
+}
+
+/* Footer styles */
+#footer {
+    background: #f8f8f8; /* Background color for the footer */
+    padding: 20px; /* Padding around footer content */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out footer sections */
+    text-align: left; /* Align text to the left */
+}
+
+#footer_l, #footer_r {
+    width: 48%; /* Give each footer section roughly half the width */
+}
+
+#footer_l p, #footer_r p {
+    margin: 5px 0; /* Space between paragraphs */
+}
